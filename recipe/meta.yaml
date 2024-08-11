@@ -1,5 +1,5 @@
 {% set name = "slurm-pipeline" %}
-{% set version = "4.0.14" %}
+{% set version = "4.0.15" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/slurm-pipeline-{{ version }}.tar.gz
-  sha256: 7bd60445a38280fe99c992f39d406e1678a0e7eb62e0ac502bf003657894c8d8
+  sha256: 05a8650944f4cb738c91a782c6247a37f6b867abbc973e93bb083704c31e6479
 
 build:
   number: 0
