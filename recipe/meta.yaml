@@ -19,7 +19,12 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools
   run:
+    - kaleido
+    - pandas
+    - pip
+    - plotly
     - pytest >=6.2.2
     - python >=3.6
 
@@ -32,8 +37,10 @@ test:
     - pip check
     - pytest test
   requires:
+    - kaleido
     - pandas
     - pip
+    - plotly
     - pytest
 
 about:
