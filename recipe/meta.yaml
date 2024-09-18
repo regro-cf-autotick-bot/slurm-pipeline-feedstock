@@ -32,6 +32,7 @@ test:
     - pip check
     - pytest test
   requires:
+    - pandas
     - pip
     - pytest
 
