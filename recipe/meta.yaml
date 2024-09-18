@@ -1,5 +1,5 @@
 {% set name = "slurm-pipeline" %}
-{% set version = "4.0.12" %}
+{% set version = "4.0.20" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/slurm-pipeline-{{ version }}.tar.gz
-  sha256: 750b827ef8af2e9b49aee9ec006cc5533ad8537fe4a429f291baeb6be0d47389
+  sha256: ed4c86997c4ac711d9251fd0be772335af236ab706bb4693183ac2c47ee3cb2f
 
 build:
   number: 0
@@ -19,7 +19,11 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools
   run:
+    - pandas
+    - pip
+    - plotly
     - pytest >=6.2.2
     - python >=3.6
 
@@ -32,7 +36,9 @@ test:
     - pip check
     - pytest test
   requires:
+    - pandas
     - pip
+    - plotly
     - pytest
 
 about:
