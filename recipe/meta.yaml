@@ -21,7 +21,6 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - kaleido
     - pandas
     - pip
     - plotly
@@ -37,7 +36,6 @@ test:
     - pip check
     - pytest test
   requires:
-    - kaleido
     - pandas
     - pip
     - plotly
