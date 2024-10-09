@@ -1,5 +1,5 @@
 {% set name = "slurm-pipeline" %}
-{% set version = "4.0.20" %}
+{% set version = "4.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/slurm-pipeline-{{ version }}.tar.gz
-  sha256: ed4c86997c4ac711d9251fd0be772335af236ab706bb4693183ac2c47ee3cb2f
+  sha256: 4833c53c74926e7f8810c7f88c0e770f212efa69704c5a3dba2d019850b75c24
 
 build:
   number: 0
@@ -26,6 +26,7 @@ requirements:
     - plotly
     - pytest >=6.2.2
     - python >=3.6
+    - toml
 
 test:
   imports:
@@ -40,6 +41,7 @@ test:
     - pip
     - plotly
     - pytest
+    - toml
 
 about:
   home: https://github.com/acorg/slurm-pipeline
