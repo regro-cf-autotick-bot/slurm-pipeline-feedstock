@@ -26,6 +26,7 @@ requirements:
     - plotly
     - pytest >=6.2.2
     - python >=3.6
+    - toml
 
 test:
   imports:
@@ -40,6 +41,7 @@ test:
     - pip
     - plotly
     - pytest
+    - toml
 
 about:
   home: https://github.com/acorg/slurm-pipeline
