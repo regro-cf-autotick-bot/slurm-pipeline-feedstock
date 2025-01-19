@@ -7,25 +7,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/slurm-pipeline-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/slurm-pipeline-{{ version }}.tar.gz
   sha256: 8534162b9494dcf02c8a113704fbbba880949eebfeb03c0c0fc11865879f62a3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
     - pandas
     - pip
     - plotly
     - pytest >=6.2.2
-    - python >=3.6
+    - python >={{ python_min }}
     - toml
 
 test:
@@ -42,6 +42,7 @@ test:
     - plotly
     - pytest
     - toml
+    - python {{ python_min }}
 
 about:
   home: https://github.com/acorg/slurm-pipeline
